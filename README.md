@@ -1,0 +1,1 @@
+This is a Deep Learning project for End to End Chicken Disease Classification using Fecal Image.

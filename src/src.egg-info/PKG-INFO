@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: src
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/ArpitKadam/Chicken-Diseases-Classification-with-Fecal-Images
+Author: ArpitKadam
+Author-email: arpitkadam922@gmail.com
+Project-URL: Bug Tracker, https://github.com/ArpitKadam/Chicken-Diseases-Classification-with-Fecal-Images/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+This is a Deep Learning project for End to End Chicken Disease Classification using Fecal Image.
