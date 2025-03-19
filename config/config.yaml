@@ -20,3 +20,9 @@ prepare_base_model:
 model_training:
   root_dir: artifacts/model_training
   trained_model_path: artifacts/model_training/trained_model.h5
+
+
+## Model Evaluation Config
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  evaluation_score_path: artifacts/model_evaluation/score.json
