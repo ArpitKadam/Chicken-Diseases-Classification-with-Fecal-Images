@@ -1,0 +1,75 @@
+[2025-03-20 01:31:07,522: INFO: main: ====================================================================================================]
+[2025-03-20 01:31:07,522: INFO: main: >>>>>> stage DATA_INGESTION_STAGE started <<<<<<]
+[2025-03-20 01:31:07,526: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-20 01:31:07,569: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-20 01:31:07,570: INFO: common: created directory at: artifacts]
+[2025-03-20 01:31:07,571: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-20 01:31:07,571: INFO: data_ingestion: Attempt to download data]
+[2025-03-20 01:31:14,334: INFO: data_ingestion: artifacts/data_ingestion/data.zip downloaded with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: D2C8:362012:3BF3E0:6835FB:67DB2283
+Accept-Ranges: bytes
+Date: Wed, 19 Mar 2025 20:01:10 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4741-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1742414468.671237,VS0,VE3320
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 99ef724555570376b4615c885943ec0064ade702
+Expires: Wed, 19 Mar 2025 20:06:10 GMT
+Source-Age: 3
+
+]
+[2025-03-20 01:31:14,334: INFO: data_ingestion: Unzipping file from artifacts/data_ingestion/data.zip into artifacts/data_ingestion]
+[2025-03-20 01:31:14,665: INFO: data_ingestion: Unzipping completed]
+[2025-03-20 01:31:14,665: INFO: data_ingestion: File successfully extracted to artifacts/data_ingestion]
+[2025-03-20 01:31:14,665: INFO: main: >>>>>> stage DATA_INGESTION_STAGE completed <<<<<<]
+[2025-03-20 01:31:14,666: INFO: main: ====================================================================================================]
+[2025-03-20 01:31:14,666: INFO: main: ====================================================================================================]
+[2025-03-20 01:31:14,666: INFO: main: >>>>>> stage PREPARE_BASE_MODEL_STAGE started <<<<<<]
+[2025-03-20 01:31:14,668: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-20 01:31:14,670: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-20 01:31:14,671: INFO: common: created directory at: artifacts]
+[2025-03-20 01:31:14,672: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-03-20 01:31:14,672: INFO: prepare_base_model: Downloading base model]
+[2025-03-20 01:31:15,625: INFO: prepare_base_model: Base model downloaded successfully]
+[2025-03-20 01:31:15,625: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-20 01:31:15,717: INFO: prepare_base_model: Base model saved at artifacts\prepare_base_model\base_model.h5]
+[2025-03-20 01:31:15,718: INFO: prepare_base_model: Updating base model]
+[2025-03-20 01:31:15,760: INFO: prepare_base_model: Base model updated successfully]
+[2025-03-20 01:31:15,850: INFO: prepare_base_model: Updated base model saved at artifacts\prepare_base_model\base_model_updated.h5]
+[2025-03-20 01:31:15,851: INFO: main: >>>>>> stage PREPARE_BASE_MODEL_STAGE completed <<<<<<]
+[2025-03-20 01:31:15,851: INFO: main: ====================================================================================================]
+[2025-03-20 01:31:15,851: INFO: main: ====================================================================================================]
+[2025-03-20 01:31:15,852: INFO: main: >>>>>> stage MODEL_TRAINING_STAGE started <<<<<<]
+[2025-03-20 01:31:15,854: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-20 01:31:15,856: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-20 01:31:15,856: INFO: common: created directory at: artifacts]
+[2025-03-20 01:31:15,857: INFO: common: created directory at: artifacts\model_training]
+[2025-03-20 01:31:16,118: INFO: model_trainer: Model training started]
+[2025-03-20 01:32:01,167: INFO: model_trainer: Model training completed]
+[2025-03-20 01:32:01,265: INFO: model_trainer: Model saved at artifacts\model_training\trained_model.h5]
+[2025-03-20 01:32:01,265: INFO: main: >>>>>> stage MODEL_TRAINING_STAGE completed <<<<<<]
+[2025-03-20 01:32:01,266: INFO: main: ====================================================================================================]
+[2025-03-20 01:32:01,266: INFO: main: ====================================================================================================]
+[2025-03-20 01:32:01,266: INFO: main: >>>>>> stage MODEL_EVALUATION_STAGE started <<<<<<]
+[2025-03-20 01:32:01,269: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-20 01:32:01,270: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-20 01:32:01,270: INFO: common: created directory at: artifacts]
+[2025-03-20 01:32:01,271: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-03-20 01:32:04,152: INFO: common: json file saved at: artifacts\model_evaluation\score.json]
+[2025-03-20 01:32:04,152: INFO: model_evaluation: Scores are {'loss': 0.16205240786075592, 'accuracy': 0.9482758641242981}]
+[2025-03-20 01:32:04,152: INFO: main: >>>>>> stage MODEL_EVALUATION_STAGE completed <<<<<<]
+[2025-03-20 01:32:04,153: INFO: main: ====================================================================================================]
